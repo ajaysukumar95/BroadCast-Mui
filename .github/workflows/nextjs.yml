@@ -40,9 +40,14 @@ jobs:
           restore-keys: |
             ${{ runner.os }}-nextjs-
       - name: Install dependencies
-        run: cd BroadCast-Mui/broadcast-bazaar && npm install
+        run: |
+            cd broadcast-bazaar
+            npm install
       - name: Build with Next.js
-        run: cd BroadCast-Mui/broadcast-bazaar &&  npx next build
+        run: |
+             cd broadcast-bazaar
+             npx next build
+       
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
