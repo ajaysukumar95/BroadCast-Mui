@@ -46,7 +46,7 @@ jobs:
       - name: Build with Next.js
         run: |
              cd broadcast-bazaar
-             npx next build
+             npm next build
        
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
