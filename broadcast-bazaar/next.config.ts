@@ -1,10 +1,8 @@
-import type { NextConfig } from "next";
-
-const nextConfig: NextConfig = {
-  output: "export", // Enables `next export`
-  reactStrictMode: true, // Recommended for best practices
+/** @type {import('next').NextConfig} */
+const nextConfig = {
+  output: "export",  // Enables static export
   images: {
-    unoptimized: true, // Required for static export
+    unoptimized: true, // Required for static exports with images
   },
 };
 
