@@ -1,5 +1,8 @@
 # Sample workflow for building and deploying a Next.js site to GitHub Pages
 name: Deploy Next.js site to Pages
+ with:
+    persist-credentials: false
+    fetch-depth: 0 
 on:
   # Runs on pushes targeting the default branch
   push:
@@ -40,9 +43,9 @@ jobs:
           restore-keys: |
             ${{ runner.os }}-nextjs-
       - name: Install dependencies
-        run: cd BroadCast-Mui/broadcast-bazaar && npm install
+         run: cd BroadCast-Mui/broadcast-bazaar && npm install
       - name: Build with Next.js
-        run: cd BroadCast-Mui/broadcast-bazaar && npx next build
+         run: cd BroadCast-Mui/broadcast-bazaar &&  npx next build
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
