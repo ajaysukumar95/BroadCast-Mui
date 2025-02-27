@@ -52,7 +52,7 @@ jobs:
         uses: actions/upload-pages-artifact@v3
         with:
               name: next-build
-              path: broadcast-bazaar/.next 
+              path: broadcast-bazaar/out 
   # Deployment job
   deploy:
     environment:
