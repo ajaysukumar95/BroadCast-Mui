@@ -46,6 +46,7 @@ jobs:
       - name: Build with Next.js
         run: |
              cd broadcast-bazaar
+             export NODE_ENV=production
              npm run build
        
       - name: Upload artifact
