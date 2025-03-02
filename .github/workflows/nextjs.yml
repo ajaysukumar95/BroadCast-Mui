@@ -44,7 +44,7 @@ jobs:
           cd broadcast-bazaar
           npm install
       - name: Set Environment Variables
-        run: echo "NODE_ENV=production"
+        run: echo "NODE_ENV=${{ secrets.NODE_ENV }}" 
       - name: Build with Next.js
         run: |
           cd broadcast-bazaar
