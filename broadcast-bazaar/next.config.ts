@@ -1,15 +1,16 @@
 const isProd = process.env.NODE_ENV === "production";
+const basePath = isProd ? "/broadcast-bazaar" : "";
+
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
   output: "export",
-  ...(isProd && {
-    basePath: "/BroadCast-Mui", // Apply only in production
-    assetPrefix: "/BroadCast-Mui/",
-  }),
   images: {
     unoptimized: true, // Required for GitHub Pages
   },
+  basePath: basePath,
+  assetPrefix: basePath,
 };
+
 
 export default nextConfig;
