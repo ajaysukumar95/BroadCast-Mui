@@ -3,6 +3,8 @@
 import { Container, Box } from "@mui/material";
 import Navbar from "../component/navingationBar";
 import HeroBanner from "../component/heroBanner";
+import SaleStatsSection from "../component/saleStatsSection";
+import PlatformSection from "../component/platformSection";
 
 export default function Home() {
     return (
@@ -15,6 +17,10 @@ export default function Home() {
                     <HeroBanner />
                 </Container>
             </Box>
+            <Container maxWidth="lg">
+                <SaleStatsSection/>
+                <PlatformSection />
+            </Container>
         </>
     );
 }

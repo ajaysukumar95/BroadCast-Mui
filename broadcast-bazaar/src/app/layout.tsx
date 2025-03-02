@@ -2,18 +2,18 @@
 
 import { ThemeProvider } from "@mui/material/styles";
 import CssBaseline from "@mui/material/CssBaseline";
-import { Roboto } from 'next/font/google';
+import { Outfit } from 'next/font/google';
 import theme from "./lib/theme";
 
-const roboto = Roboto({
+const outfit = Outfit({
   weight: ['300', '400', '500', '700'],
   subsets: ['latin'],
   display: 'swap',
-  variable: '--font-roboto',
+  variable: '--font-outfit',
 });
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="en" className={roboto.variable}>
+    <html lang="en" className={outfit.variable}>
       <body>
         <ThemeProvider theme={theme}>
           <CssBaseline />
