@@ -41,20 +41,18 @@ jobs:
             ${{ runner.os }}-nextjs-
       - name: Install dependencies
         run: |
-          cd broadcast-bazaar
-          npm install
-      - name: Set Environment Variables
-        run: echo "NODE_ENV=${{ secrets.NODE_ENV }}" 
+            cd broadcast-bazaar
+            npm install
       - name: Build with Next.js
         run: |
-          cd broadcast-bazaar
-          npm run build
-
+             cd broadcast-bazaar
+             npm run build
+       
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          name: "github-pages"
-          path: "./broadcast-bazaar/out"
+              name: "github-pages"  
+              path: "./broadcast-bazaar/out" 
   # Deployment job
   deploy:
     environment:
