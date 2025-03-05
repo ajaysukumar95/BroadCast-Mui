@@ -18,10 +18,10 @@ const SaleStatsSection: React.FC = () => {
     return (
         <>
             <Box sx={{ display: "flex", justifyContent: "center", flexDirection: "column", alignItems: "center" }} p={2}>
-                <Typography variant="h4" gutterBottom sx={{ fontSize: "40px", fontWeight: 600, lineHeight: "40px" }}>
+                <Typography variant="h4" gutterBottom sx={{ fontSize: "40px", fontWeight: 600, lineHeight: "40px",textAlign:"center" }}>
                     Maximize Your <Typography component="span" sx={{ color: (theme) => theme.palette.primary.main, fontSize: "40px", fontWeight: 600, lineHeight: "40px" }}>Sales</Typography> with Live Shopping
                 </Typography>
-                <Typography variant="h6" sx={{ fontSize: "16px", fontWeight: "400" }} gutterBottom>
+                <Typography variant="h6" sx={{ fontSize: "16px", fontWeight: "400",textAlign:{xs:"center",md:"left"} }} gutterBottom>
                     Outperform Traditional e-Commerce with Real-Time Engagement
                 </Typography>
             </Box>

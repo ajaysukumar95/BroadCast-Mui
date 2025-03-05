@@ -5,6 +5,7 @@ import Navbar from "../component/navingationBar";
 import HeroBanner from "../component/heroBanner";
 import SaleStatsSection from "../component/saleStatsSection";
 import PlatformSection from "../component/platformSection";
+import StreamerToolsSection from "../component/streamerToolsSection";
 
 export default function Home() {
     return (
@@ -18,9 +19,14 @@ export default function Home() {
                 </Container>
             </Box>
             <Container maxWidth="lg">
-                <SaleStatsSection/>
+                <SaleStatsSection />
                 <PlatformSection />
             </Container>
+            <Box sx={{ background: "#F2F4F7", width: "100%" }}>
+                <Container maxWidth="lg">
+                    <StreamerToolsSection />
+                </Container>
+            </Box>
         </>
     );
 }
